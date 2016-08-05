@@ -1,0 +1,48 @@
+﻿<div class="row">
+    <div class="col-md-12">
+        <table class="table table-bordered table-hover">
+            
+            <tr>
+                <th>#</th>
+                <th>類別</th>
+                <th>日期</th>
+                <th>金額</th>
+            </tr>
+
+            @*第三版  ---------------START *@
+
+            @for (int i = 0; i < Model.Count; i++)
+            {
+                <tr>
+                    <td>@Model[i].Serial</td>
+                    <td>@Model[i].Type</td>
+                    <td>@Model[i].Date</td>
+                    <td>@Model[i].Money</td>
+                </tr>
+            }
+            @*第三版  ---------------END *@
+
+
+            @*第二版  ---------------START *@
+            
+            @*<tr>
+                <td>@Model.Serial</td>
+                <td>@Model.Type</td>
+                <td>@Model.Date</td>
+                <td>@Model.Money</td>
+            </tr>*@
+            @*第二版  ---------------END   *@
+
+            @*第一版  ---------------START *@
+            @*<tr>
+                <td>2</td>
+                <td>支出</td>
+                <td>2016-01-02</td>
+                <td>1,600</td>
+            </tr>
+            @*第一版  ---------------END   *@
+
+        </table>
+    </div>
+</div>
+
