@@ -29,7 +29,7 @@ namespace Day1HomeWork.Controllers
             return View();
         }
 
-    public ActionResult Table()
+        public ActionResult Table()
         {
             // 第二版-------------- - START
             var model = new List<MyClass>(){
