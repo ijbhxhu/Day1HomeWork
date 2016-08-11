@@ -17,7 +17,7 @@ namespace Day1HomeWork.Models
         public System.Guid Id { get; set; }
         public int Category { get; set; }
         public int Amount { get; set; }
-        public System.DateTime Dateee { get; set; }
         public string Remark { get; set; }
+        public System.DateTime Date { get; set; }
     }
 }
