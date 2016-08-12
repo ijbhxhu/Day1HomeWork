@@ -15,9 +15,9 @@ namespace Day1HomeWork.Models
     public partial class AccountBook
     {
         public System.Guid Id { get; set; }
-        public int Category { get; set; }
-        public int Amount { get; set; }
-        public string Remark { get; set; }
-        public System.DateTime Date { get; set; }
+        public int Categoryyy { get; set; }
+        public int Amounttt { get; set; }
+        public System.DateTime Dateee { get; set; }
+        public string Remarkkk { get; set; }
     }
 }

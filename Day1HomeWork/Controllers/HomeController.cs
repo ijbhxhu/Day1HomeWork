@@ -35,7 +35,7 @@ namespace Day1HomeWork.Controllers
         public ActionResult Table()
         {
             var list = (from c in db.AccountBook
-                        orderby c.Date
+                        orderby c.Dateee
                         select c).Take(10);
 
             // 第三版-------------- - START
@@ -46,9 +46,9 @@ namespace Day1HomeWork.Controllers
             {
                 MyClass clMY = new MyClass();
                 clMY.Serial = i.ToString();
-                clMY.Type = (item.Category == 0 ? "支出" : "收入");
-                clMY.Money = item.Amount.ToString();
-                clMY.Date = item.Date.ToString();
+                clMY.Type = (item.Categoryyy == 0 ? "支出" : "收入");
+                clMY.Money = item.Amounttt.ToString();
+                clMY.Date = item.Dateee.ToString();
                 lstMyClass.Add(clMY);
                 i++;
             }
