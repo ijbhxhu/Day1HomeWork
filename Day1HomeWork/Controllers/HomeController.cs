@@ -34,23 +34,26 @@ namespace Day1HomeWork.Controllers
 
         public ActionResult Table()
         {
+
             var list = (from c in db.AccountBook
                         orderby c.Dateee
                         select c).Take(10);
 
+            List<Models.AccountBook> lstAccBook = list.ToList();
             // 第三版-------------- - START
-           
+
             List<MyClass> lstMyClass = new List<MyClass>();
-            int i = 1;
-            foreach (var item in list)
+
+
+
+            for (int i = 0 ; i < lstAccBook.Count(); i++)
             {
                 MyClass clMY = new MyClass();
-                clMY.Serial = i.ToString();
-                clMY.Type = (item.Categoryyy == 0 ? "支出" : "收入");
-                clMY.Money = item.Amounttt.ToString();
-                clMY.Date = item.Dateee.ToString();
+                clMY.Serial = (i + 1).ToString();
+                clMY.Type = (lstAccBook[0].Categoryyy == 0 ? "支出" : "收入");
+                clMY.Money = lstAccBook[0].Amounttt.ToString();
+                clMY.Date = lstAccBook[0].Dateee.ToString();
                 lstMyClass.Add(clMY);
-                i++;
             }
 
             return View(lstMyClass);
